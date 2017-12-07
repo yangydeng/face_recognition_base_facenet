@@ -97,11 +97,12 @@ def face_recognition(new_person_name):
         stuff_bottle_neck = convert_bottleneck2list(stuff_bottle_neck_str)
         distance = calculate_dis(bottle_neck, stuff_bottle_neck)
         # print(name, distance)
-        if distance<0.52:
+        if distance<threshold:
             print('\n识别结果：'+name)
 
 
 if __name__ == '__main__':
+    threshold = 0.52
     while True:
         print('\n======================================')
         num = input('输入数字  1 添加新成员; 2 人脸识别; 3 退出  \n')
